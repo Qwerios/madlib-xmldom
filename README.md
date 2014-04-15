@@ -1,4 +1,4 @@
-# madlib-xmldom
+# madlib-xmldom [![Build Status](https://travis-ci.org/Qwerios/madlib-xmldom.svg?branch=master)](https://travis-ci.org/Qwerios/madlib-xmldom)
 Provide uniform access to create and/or serialize an XML document
 
 ## acknowledgments
