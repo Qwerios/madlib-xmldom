@@ -1,8 +1,11 @@
 # madlib-xmldom [![Build Status](https://travis-ci.org/Qwerios/madlib-xmldom.svg?branch=master)](https://travis-ci.org/Qwerios/madlib-xmldom)
 Provide uniform access to create and/or serialize an XML document
 
+
 ## acknowledgments
 The Marviq Application Development library (aka madlib) was developed by me when I was working at Marviq. They were cool enough to let me publish it using my personal github account instead of the company account. We decided to open source it for our mutual benefit and to ensure future updates should I decide to leave the company.
+
+This module relies on jindw's [xmldom](https://github.com/jindw/xmldom) module for the nodejs implementation of the W3 XML DOM Specification
 
 
 ## philosophy
@@ -16,10 +19,25 @@ Currently madLib is focused on supporting the following platforms:
 * NodeJS
 
 
-
 ## installation
 ```bash
 $ npm install madlib-xmldom --save
 ```
 
+
 ## usage
+The xmldom module exposes two main methods: parse and serialize.
+Switching between the nodejs and browser version of the module is achieved using the package.json browser field. Tools such as [browserify](http://browserify.org/) will pick up on this field and bundle the correct version for your target environment.
+
+#### parse
+```javascript
+    var xmldom = require "madlib-xmldom"
+    var xmlDoc = xmldom.parse( "<example><foo/></example>" )
+```
+
+#### serialize
+```javascript
+    var xmldom    = require "madlib-xmldom"
+    var xmlDoc    = xmldom.parse( "<example><foo/></example>" )
+    var xmlString = xmldom.serialize( xmlDoc.documentElement )
+```
