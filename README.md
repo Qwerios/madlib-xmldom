@@ -31,13 +31,13 @@ Switching between the nodejs and browser version of the module is achieved using
 
 #### parse
 ```javascript
-    var xmldom = require "madlib-xmldom"
-    var xmlDoc = xmldom.parse( "<example><foo/></example>" )
+var xmldom = require "madlib-xmldom"
+var xmlDoc = xmldom.parse( "<example><foo/></example>" )
 ```
 
 #### serialize
 ```javascript
-    var xmldom    = require "madlib-xmldom"
-    var xmlDoc    = xmldom.parse( "<example><foo/></example>" )
-    var xmlString = xmldom.serialize( xmlDoc.documentElement )
+var xmldom    = require "madlib-xmldom"
+var xmlDoc    = xmldom.parse( "<example><foo/></example>" )
+var xmlString = xmldom.serialize( xmlDoc.documentElement )
 ```
