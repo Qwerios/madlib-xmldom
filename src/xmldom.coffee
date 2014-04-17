@@ -22,7 +22,7 @@
         #   xmldom module
         #
         #   @function parse
-        #   @param {String} xmlString A valid string containing XML
+        #   @param {String} xmlString   A valid string containing XML
         #
         #   @return {DOM}   An XML DOM Document instance
         #
@@ -36,7 +36,7 @@
         #   xmldom module
         #
         #   @function serialize
-        #   @param {DOM Node} The XML Node that is to be serialized
+        #   @param {DOM Node}   xmlNode   The XML Node that is to be serialized
         #
         #   @return {String} An XML string representation of the node and its children
         #
