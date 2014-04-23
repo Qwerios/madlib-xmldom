@@ -31,16 +31,37 @@
                 # object also exists but with access restricted to Ti.App.
                 # Thats why only checking for Ti isn't enough
                 #
-                return Ti.XML.parseString( xmlString )
+                try
+                    xmlDoc = Ti.XML.parseString( xmlString )
 
-            else if window.ActiveXObject and window.GetObject
-                dom = new ActiveXObject( "Microsoft.XMLDOM" )
-                dom.loadXML( xmlString )
-                return dom
+                catch error
+                    xmlDoc = null
+
+                return xmlDoc
 
             else if window.DOMParser?
-                parser = new window.DOMParser()
-                return parser.parseFromString( xmlString, "text/xml" )
+
+                try
+                    parser = new window.DOMParser()
+                    xmlDoc = parser.parseFromString( xmlString, "text/xml" )
+
+                catch error
+                    xmlDoc = null
+
+                return xmlDoc
+
+            else if window.ActiveXObject and window.GetObject
+                xmlDoc       = new ActiveXObject( "Microsoft.XMLDOM" )
+                xmlDoc.async = "false"
+
+                try
+                    xmlDoc.loadXML( xmlString )
+
+                catch error
+                    xmlDoc = null
+
+
+                return xmlDoc
 
             else
                 throw new Error( "No XML parser available" )
