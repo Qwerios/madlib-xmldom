@@ -1,4 +1,8 @@
-# madlib-xmldom [![Build Status](https://travis-ci.org/Qwerios/madlib-xmldom.svg?branch=master)](https://travis-ci.org/Qwerios/madlib-xmldom)
+# madlib-xmldom
+[![Build Status](https://travis-ci.org/Qwerios/madlib-xmldom.svg?branch=master)](https://travis-ci.org/Qwerios/madlib-xmldom) [![NPM version](https://badge.fury.io/js/madlib-xmldom.png)](http://badge.fury.io/js/madlib-xmldom) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
+[![Npm Downloads](https://nodei.co/npm/madlib-xmldom.png?downloads=true&stars=true)](https://nodei.co/npm/madlib-xmldom.png?downloads=true&stars=true)
+
 Provide uniform access to create and/or serialize an XML document
 
 
